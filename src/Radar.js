@@ -85,8 +85,8 @@ export default class RadarChart extends Component
 
     const length = chart.rings.length
     const rings = chart.rings.map(function (r, i) {
-      if (i !== length - 1 ){
-        return (<Path key={'rings'+i} d={r.path.print()} stroke={colors.stroke} strokeOpacity={colors.strokeOpacity} fill='none' />)
+      if (i !== length ){
+        return (<Path x="20" y="20" key={'rings'+i} d={r.path.print()} stroke={colors.stroke} strokeOpacity={colors.strokeOpacity} fill='none' />)
       }
     })
 
@@ -107,7 +107,6 @@ export default class RadarChart extends Component
 
     return (<Svg width={options.width} height={options.height}>
                 <G x={options.margin.left} y={options.margin.top}>
-                    {labels}
                     <G x={options.margin.left * -1} y={options.margin.top * -1}>
                         {rings}
                         {curves}
