@@ -80,7 +80,7 @@ export default class RadarChart extends Component
     const self = this
     const colors = styleSvg({}, self.props.options)
     const curves = chart.curves.map(function (c, i) {
-      return (<Path key={i} d={c.polygon.path.print()} fill={colors.fill} fillOpacity={0.6} />)
+      return (<Path x="20" y="20" key={i} d={c.polygon.path.print()} fill={colors.fill} fillOpacity={0.6} />)
     })
 
     const length = chart.rings.length
