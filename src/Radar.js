@@ -107,6 +107,7 @@ export default class RadarChart extends Component
 
     return (<Svg width={options.width} height={options.height}>
                 <G x={options.margin.left} y={options.margin.top}>
+                    {labels}
                     <G x={options.margin.left * -1} y={options.margin.top * -1}>
                         {rings}
                         {curves}
